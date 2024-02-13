@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+*{
+    text-align: center;
+}
+
+
+.box_css{
+    margin: 1em 10px;
+    padding: 1em;
+    background-color: #b3e5fc;
+    border: dashed 3px #29b6f6;
+    box-shadow: 0 0 0 10px #b3e5fc;
+    border-radius: 5px;
+}
+
+
+
+div {
+    margin: 1rem 0;
+}
+  
+div > * {
+    margin: 0 0.5rem;
+}
+
+
+
+.blackboard-box{
+    background: #104300;
+    margin: 1em 0;
+    padding: 1em 1em 0 1em;
+    border: 8px solid #a60;
+    box-shadow: 2px 2px 4px #999, 2px 2px 2px #020 inset;
+}
+  
+.blackboard-box p,h1{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-shadow: 0px 0px 2px #fff;
+}
+
+.chalk1{
+    display: block;
+    margin-top: 10px;
+    margin-left: 90%;
+    border: solid 3px #fff;
+    width: 15px;
+    height: 6px;
+    border-radius: 3px 2px 0 2px;
+}
+.chalk2{
+    display: block;
+    margin-top: -6px;
+    margin-left: calc(90% - 30px);
+    border: solid 3px #ffee58;
+    width: 20px;
+    height: 6px;
+    border-radius: 3px 2px 0 2px;
+}
+
+
+.list{
+    display: flex;
+}
+
+
+header{
+ 	margin-top:20px;
+ }
+ body {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+     margin: 0;
+ }
+ ul {
+     list-style-type: none;
+     padding: 0;
+ }
+ table {
+     margin: 0;
+     padding: 0;
+ }
+ td {
+     display: flex;
+     align-items: center;
+ }
+ footer {
+     margin-top: 20px; /* 必要に応じて調整 */
+ }
+ 
+.tape-box{
+  margin: 1em 0;
+  padding: 1em;
+  background-color: #ffffcc;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.tape{
+  display: block;
+  background-color: #ccb;
+  opacity: 0.2;
+  transform: rotate(3deg);
+  width: 40%;
+  height: 35px;
+  margin: -2em auto 0 auto;
+  border-left: 3px dotted rgba(0,0,0,.1);
+  border-right: 3px dotted rgba(0,0,0,.1);
+}
+
+.tape-box p{
+  margin: 0;
+  padding: 0;
+}
+
+
+.test{
+    display: flex;
+}
