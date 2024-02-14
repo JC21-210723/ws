@@ -11,6 +11,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import java.util.ArrayList;
 
 @WebServlet(urlPatterns={"/Insert"})
@@ -37,19 +39,12 @@ public class Insert extends HttpServlet {
 			Connection  conn = DriverManager.getConnection(url, user, pass);
 
 			PreparedStatement statement = conn.prepareStatement("INSERT INTO ijin_list2(name) VALUES(?);");
-            PreparedStatement statement2 = conn.prepareStatement("SELECT name FROM ijin_list2;");
 			statement.setString(1, name);
 			statement.executeUpdate();
-			ResultSet rs = statement2.executeQuery();
 			
-			List<String> resultList = new ArrayList<>();
-			
-			while(rs.next()) {
-				resultList.add(rs.getString("name"));
-				request.setAttribute("list",resultList);
-			}
-			request.setAttribute("name",name);
-			request.getRequestDispatcher("./result.jsp").forward(request,response);
+			HttpSession session = request.getSession(true);
+			session.setAttribute("name", name);
+			response.sendRedirect("./Display");
 			
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -19,9 +19,6 @@
                 <input type="text" name="ijin" placeholder="例)豊臣秀吉">
             </label>
             <input type="submit" value="登録"><br>
-            <div>
-                <p>偉人画像選択：<input type="file"></p>
-            </div>
         </form><br><br>
 
         <div class="box_css">

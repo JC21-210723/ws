@@ -37,7 +37,7 @@ public class Delete extends HttpServlet {
                        statement.executeUpdate();
                    }
                }
-               response.sendRedirect("./result.jsp");
+               request.getRequestDispatcher("/result.jsp").forward(request, response);
            }
        } catch (SQLException | ClassNotFoundException e) {
            e.printStackTrace();

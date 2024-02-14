@@ -9,7 +9,7 @@
 <title>登録結果</title>
 </head>
 <%
-	String name = (String) request.getAttribute("name");
+	String name = (String) session.getAttribute("name");
 	List<String> list = (List<String>) request.getAttribute("list");
 %>
 <body>
@@ -52,13 +52,16 @@
                var xhr = new XMLHttpRequest();
                xhr.open("POST", "./Delete", true);
                xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+               xhr.send(JSON.stringify({ items: selectedItems }));
                xhr.onreadystatechange = function () {
+                   console.log(xhr.readyState);
+                   console.log(xhr.status);
                    if (xhr.readyState == 4 && xhr.status == 200) {
                        // 削除が成功した場合の処理
                        location.reload(); // ページを再読み込み
                    }
                };
-               xhr.send(JSON.stringify({ items: selectedItems }));
+            
            }
        } else {
            alert("削除するアイテムを選択してください。");
