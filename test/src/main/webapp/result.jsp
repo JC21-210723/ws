@@ -9,8 +9,8 @@
 <title>登録結果</title>
 </head>
 <%
-  // String name = (String) request.getAttribute("name");
-  String name = (String) session.getAttribute("name");
+  String name = (String) request.getAttribute("name");
+  // String name = (String) session.getAttribute("name");
   List<String> list = (List<String>) request.getAttribute("list");
 %>
 <body>
