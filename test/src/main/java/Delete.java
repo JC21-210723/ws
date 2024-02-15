@@ -17,11 +17,12 @@ public class Delete extends HttpServlet {
    final String dbName = "sotuken1";
    final String user = "210723";
    final String pass = "210723";
+   
    public Delete() {
        super();
    }
-   protected void doPost(HttpServletRequest request, HttpServletResponse response)
-           throws ServletException, IOException {
+   
+   protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
        String url = "jdbc:mysql://" + dbServer + "/" + dbName;
        response.setContentType("text/html;charset=UTF-8");
        request.setCharacterEncoding("utf-8");
