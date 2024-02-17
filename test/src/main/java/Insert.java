@@ -31,9 +31,14 @@ public class Insert extends HttpServlet {
                statement.setString(1, name);
                statement.executeUpdate();
            }
+           
            HttpSession session = request.getSession(true);
+           
+           //今回は、「session」を使用して値をセット！！
            session.setAttribute("name", name);
+           
            response.sendRedirect("./Display");
+           
        } catch (SQLException | ClassNotFoundException e) {
            e.printStackTrace();
        }
